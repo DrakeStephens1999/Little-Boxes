@@ -1,0 +1,251 @@
+/*Im creating a background color that is fairly muted as to not distract from the art*/
+* {
+    text-align: center;
+}
+
+/*I'm creating a centered picture frame of sorts to really cement my art work (also I need a square) im using vmin as a measurement to have my art be viewable on other devices*/
+.frame{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: gold;
+    border-width: 15px;
+    border-style: solid;
+    width: 80vmin;
+    height: 80vmin;
+    background-color: aquamarine;
+}
+/*The head is just a simple circle still using relative because it's centerede along with the frames*/
+.head {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vmin;
+    height: 60vmin;
+    border-radius: 50%;
+    background-color: #2B2826;
+}
+/*eyes: The eyes are absolute because of their posisitioning within the main circle while the pupils are relative so the can be perfectly centerered in their respective eyes.*/
+.eye {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+
+}
+
+#eye-1{ 
+    left: 3vmin;
+    top: 15vmin;
+    height: 10vmin;
+    width: 10vmin;
+}
+#eye-2{
+    right: 3vmin;
+    top: 15vmin;
+    height: 10vmin;
+    width: 10vmin;
+}
+
+.pupil {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #2B2826;
+}
+
+#pupil-1{
+    height:5vmin;
+    width: 5vmin;
+}
+
+#pupil-2{
+    height: 5vmin;
+    width: 5vmin;
+}
+
+/*Mouth made an oval for the mouth than begun on the teeth. I made two classes for the teeth: teeth-bottom and teeth-top because the different rows of teeth had different values for the triangles used. Then I gave each tooth it's own id for positioning purposes*/
+#mouth {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vmin;
+    height: 17vmin;
+    background: red;
+    border-radius: 25vmin / 8.5vmin;
+    top: 35vmin;
+}
+.teeth-bottom {
+    width: 0;
+    height: 0;
+    border-left: 2.5vmin solid red;
+    border-right: 2.5vmin solid red;
+    border-bottom: 5vmin solid white;
+}
+.teeth-top {
+    width: 0;
+    height: 0;
+    border-left: 2.5vmin solid red;
+    border-right: 2.5vmin solid red;
+    border-top: 5vmin solid white;
+}
+#t1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 5vmin;
+    bottom: 2.2vmin;
+}
+#t2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 12vmin;
+    bottom: .8vmin;
+}
+#t3{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 19vmin;
+    bottom: .3vmin;
+}
+#t4{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 26vmin;
+    bottom: .3vmin;
+}
+#t5{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 33vmin;
+    bottom: .8vmin;
+}
+#t6{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 40vmin;
+    bottom: 2.2vmin;
+}
+#t7{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 5vmin;
+    top: 2.2vmin;
+}
+#t8{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 12vmin;
+    top: .8vmin;
+}
+#t9{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 19vmin;
+    top: .3vmin;
+}
+#t10{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 26vmin;
+    top: .3vmin;
+}
+#t11{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 33vmin;
+    top: .8vmin;
+}
+#t12{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 40vmin;
+    top: 2.2vmin;
+}
+/*Star I realized at the end i needed an odd shape so i will make a star another enemy in mario. I did have to look up how to make on though and it ended up taking much more time than i thought. To start with you need to make three triangles and rotatate all of them using the ::before and ::after to make them line up into a star.*/
+.Star{
+    margin: 16.66px 0;
+    position: absolute;
+    display: block;
+    color: yellow;
+    width: 0px;
+    height: 0px;
+    border-right: 33.33px solid transparent;
+    border-bottom: 23.33px solid yellow;
+    border-left: 33.33px solid transparent;
+    transform: rotate(35deg);
+  }
+  .Star:before {
+    border-bottom: 26.66px solid yellow;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -15px;
+    left: -22.33px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+  }
+  .Star:after {
+    position: absolute;
+    display: block;
+    color: yellow;
+    top: 1px;
+    left: -35px;
+    width: 0px;
+    height: 0px;
+    border-right: 33.33px solid transparent;
+    border-bottom: 23.33px solid yellow;
+    border-left: 33.33px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+  }
+
+  #Star1{
+    bottom: 10px;
+    left: 10px;
+  }
+  #Star2{
+    bottom: 10px;
+    right: 10px;
+  } 
+  #Star3{
+    top: 10px;
+    left: 10px;
+  }
+  #Star4{
+    top: 10px;
+    right: 10px;
+  }
